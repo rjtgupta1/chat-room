@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Room</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <section class="chatArea">
+            <h3>Baat - Chit</h3>
+            <section class="messageArea">
+                <div class="inbound-msg msg">
+                    <h4>Manu</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, atque.</p>
+                </div>
+                <div class="outbound-msg msg">
+                    <h4>Rajat</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, animi.</p>
+                </div>
+                <div class="inbound-msg msg">
+                    <h4>Shivanshu</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, atque.</p>
+                </div>
+            </section>
+            <textarea id="textarea" cols="30" rows="1" placeholder="Write a message..."></textarea>
+        </section>
+    </div>
+
+
+    <script src="/client.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+    </script>
+</body>
+</html>
