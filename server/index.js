@@ -1,24 +1,20 @@
 const express = require('express');
 const { Server } = require('socket.io');
-const { readFileSync } = require( 'fs');
 
 const app = express();
 app.use(express.static(__dirname + '/public'));
-
-const server = app.listen(8080,()=>{
-    console.log("Server is up!");
-})
 
 
 app.get('/',(req,res)=>{
     res.sendFile(__dirname+"/chatroom.html");
 })
 
-app.get('/btn',(req,res)=>{
-    console.log("clicked on button");
-    res.status(200).json({msg:"Got message at server side."})
-})
 
+//  server
+
+const server = app.listen(8080,()=>{
+    console.log("Server is up!");
+})
 
 //  Socket
 
@@ -29,6 +25,15 @@ io.on('connection',(socket)=>{
 
     socket.on('disconnect',()=>{
         socket.send("User disconnected");
+    })
+
+    socket.on('error',()=>{
+        console.log("Something went wrong");
+    })
+
+    socket.on('message',(msg)=>{
+        // console.log("message : ",msg);
+        socket.broadcast.emit('message',msg);
     })
 
 })
