@@ -6,9 +6,17 @@ app.use(express.static(__dirname + '/public'));
 
 
 app.get('/',(req,res)=>{
-    res.sendFile(__dirname+"/chatroom.html");
+    res.sendFile(__dirname+"/public/pages/chatroom.html");
 })
 
+
+app.get('/signup',(req,res)=>{
+    res.sendFile(__dirname+"/public/pages/signup.html");
+})
+
+app.get('/signin',(req,res)=>{
+    res.sendFile(__dirname+"/public/pages/signin.html");
+})
 
 //  server
 
