@@ -23,7 +23,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F9EFDB;
     min-height: 100vh;
 }
 
@@ -38,7 +37,7 @@ body{
 
 .chatArea h3{
     text-align: center;
-    background-color: #EBD9B4;
+    background-color: #FFB996;
     padding: 7px;
 }
 
@@ -85,11 +84,11 @@ body{
 }
 
 /* ---------------------------------------------------------- 
-                    Sign - Up
+                    Sign - Up & Sign - In                    
  ---------------------------------------------------------- */
 
 
-  .signup-container {
+  .signup-container , .signin-container{
     background-color: #fff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -100,8 +99,9 @@ body{
     text-align: center;
   }
 
-  .signup-container h2 {
+  .signup-container h2 , .signin-container h2 {
     color: #333;
+    padding: 20px;
   }
 
   .form-group {
@@ -125,7 +125,7 @@ body{
   }
 
   .form-group button {
-    background-color: #4caf50;
+    background-color: #FE7A36;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -135,67 +135,7 @@ body{
   }
 
   .form-group button:hover {
-    background-color: #45a049;
-  }
-
-  .form-group p {
-    margin: 10px 0;
-    font-size: 14px;
-    color: #888;
-  }
-
-  /* ---------------------------------------------------------- 
-                    Sign - In
- ---------------------------------------------------------- */
-
-
- .signup-container {
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-    width: 400px;
-    max-width: 100%;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .signup-container h2 {
-    color: #333;
-  }
-
-  .form-group {
-    margin-bottom: 20px;
-  }
-
-  .form-group label {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 8px;
-    color: #555;
-  }
-
-  .form-group input {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-  }
-
-  .form-group button {
-    background-color: #4caf50;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-
-  .form-group button:hover {
-    background-color: #45a049;
+    background-color: #fc6215;
   }
 
   .form-group p {
