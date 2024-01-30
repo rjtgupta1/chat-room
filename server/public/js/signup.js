@@ -1,14 +1,14 @@
-let signInBtn = document.querySelector('#signin-btn');
+let signUpBtn = document.querySelector('#signup-btn');
 let email = document.querySelector('#email');
 let password = document.querySelector('#password');
 
-signInBtn.addEventListener('click',(e)=>{
+signUpBtn.addEventListener('click',(e)=>{
     // console.log("Clicked on button");
 
     if(email.value && password.value){
         e.preventDefault();
-        // console.log("Email : ",email.value);
-        // console.log("Pass : ",password.value);
+        console.log("Email : ",email.value);
+        console.log("Pass : ",password.value);
 
         let data = {
             email: email.value,
@@ -16,7 +16,7 @@ signInBtn.addEventListener('click',(e)=>{
         }
 
         fetch(
-            "/signin",
+            "/signup",
             {
                 method:"post",
                 mode:"same-origin",
@@ -30,11 +30,7 @@ signInBtn.addEventListener('click',(e)=>{
         .then(async (res)=>{
             const Response = await res.json();
             // console.log(Response);
-            // console.log(res.status);
             alert(Response.msg);
-            if(res.status === 200){
-                window.location.href = "/chatroom";
-            }
         })
 
     }else{
